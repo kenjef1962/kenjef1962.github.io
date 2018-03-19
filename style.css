@@ -4,8 +4,8 @@ h1 {
 }
 
 .robots {
-	flex-wrap: wrap;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
@@ -18,27 +18,56 @@ h1 {
 	 background-color: #5f93e8;
 }
 
+/*********** head ***********/
+
 .head { 
-	width: 200px; 
-	margin: 0 auto; 
-	height: 150px; 
 	border-radius: 200px 200px 0 0; 
+	width: 200px; 
+	height: 150px; 
+	margin: 0 auto; 
 	margin-bottom: 10px;
 } 
-
-.eyes {
-	display: flex
-}
 
 .head:hover {
 	width: 300px;
     transition: 1s ease-in-out;
 }
 
+.eyes {
+	display: flex; 
+}
+
+.left_eye, .right_eye { 
+	background-color: white;  
+	border-radius: 15px; 
+	position: relative; 
+	top: 100px; 
+	width: 20px; 
+	height: 20px; 
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	left: 40px; 
+} 
+
+.right_eye { 
+	left: 120px; 
+}
+
+/*********** Upper Body ***********/
+
 .upper_body { 
 	width: 300px; 
 	height: 150px;
 	display: flex; 
+} 
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
 } 
 
 .left_arm, .right_arm { 
@@ -51,22 +80,37 @@ h1 {
 	margin-right: 10px; 
 } 
 
+.left_arm:hover {
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+    transform-origin: top;
+    transition: 0.5s ease-in-out;
+}
+
 .right_arm { 
 	margin-left: 10px; 
 } 
 
-.torso { 
-	width: 200px; 
-	height: 200px;
-	border-radius: 0 0 50px 50px; 
-} 
+.right_arm:hover {
+	-webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    transform-origin: top;
+    transition: 0.5s ease-in-out;
+}
+
+/*********** Upper Body ***********/
 
 .lower_body { 
 	width: 200px; 
 	height: 200px;
-	/* This is another useful property. Hmm what do you think it does?*/
 	margin: 0 auto;
-	display: flex; 
+	display: flex;
 } 
 
 .left_leg, .right_leg { 
@@ -85,31 +129,22 @@ h1 {
     -o-transform: rotate(20deg);
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
+    transform-origin: top left;
+    transition: 0.5s ease-in-out;
 }
 
 .right_leg { 
 	margin-left: 30px; 
 }
 
-.left_eye, .right_eye { 
-	width: 20px; 
-	height: 20px; 
-	border-radius: 15px; 
-	background-color: white;  
-} 
-
-.left_eye { 
-	/* These properties are new and you haven't encountered
-	in this course. Check out CSS Tricks to see what it does! */
-	position: relative; 
-	top: 100px; 
-	left: 40px; 
-} 
-
-.right_eye { 
-	position: relative; 
-	top: 100px; 
-	left: 120px; 
+.right_leg:hover {
+	-webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-0deg);
+    -o-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    transform-origin: top right;
+    transition: 0.5s ease-in-out;
 }
 
 
